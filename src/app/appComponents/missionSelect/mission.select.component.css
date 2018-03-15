@@ -1,0 +1,34 @@
+.mission-select {
+  flex-direction: column;
+  widows: 100%;
+  text-align: center;
+}
+
+
+.mission-select::after {
+  content: "";
+  background: url('../../../assets/images/o-THE-MATRIX-facebook.jpg');
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.openView {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.cesium {
+  margin: 57px 1px 0px 113px;
+}
+
+
+div {
+  justify-content: center;
+}
+
+

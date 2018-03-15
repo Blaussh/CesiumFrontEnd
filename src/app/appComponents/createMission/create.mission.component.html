@@ -1,0 +1,24 @@
+<div class="createMission" style="display: flex">
+  <div class="shape-picker">
+    <app-shapes></app-shapes>
+  </div>
+  <div class=cesium-wrapper>
+    <div class="create-view">
+      <div class="navigation">
+        <app-navigation (viewNameChanged)="onNameUpdated($event)">
+        </app-navigation>
+      </div>
+      <div class="openView">
+        <app-open-view></app-open-view>
+      </div>
+    </div>
+    <div class="cesium">
+      <app-cesium></app-cesium>
+    </div>
+    <div class="save">
+      <input class="view-name-input" [(ngModel)]="viewName" (input)="onViewNameUpdated($event)" placeholder="View Name">
+      <button (click)="save()">save</button>
+      <h1 class="saveSuccess" [hidden]="savedSuccess === false"> View Saved</h1>
+    </div>
+  </div>
+</div>

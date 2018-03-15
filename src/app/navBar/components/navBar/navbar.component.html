@@ -1,0 +1,10 @@
+<nav class="nav-bar">
+  <div id="navigation-btns" class="nav-item">
+    <a (click)="showCreate()" *ngIf="!!authService.isAdmin && !!authService.isAuthenticated" [routerLink]="['/app-create-mission']" >Create view</a>
+    <a (click)="showOpen()" *ngIf="!!authService.isAuthenticated" [routerLink]="['/app-mission-select']">Open view</a>
+  </div>
+  <div id="loginout" class="nav-item">
+    <a (click)="authService.logout()"  *ngIf="!!authService.isAuthenticated" [routerLink]="['/login']">Log out</a>
+    <a routerLink="/login" *ngIf="!authService.isAuthenticated">Log in</a>
+  </div>
+</nav>

@@ -1,0 +1,6 @@
+<select class="open-view-selector" ng-model="any" (change)="onSelectionChanged($event)">
+  <option *ngFor="let option of values" value="{{option.name}}" >{{option.name}}</option>
+</select>
+<!-- [chosenShape]='option' -->
+<!-- <select ng-model="Shape" (change)="onChangeValue($event)"> -->
+

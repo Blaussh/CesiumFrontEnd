@@ -1,0 +1,64 @@
+/* .popup {
+  float: left;
+  width: 340px;
+  background: #727272;
+  padding: 10px;
+  border-radius: 6px;
+  color: #FFF;
+  position: relative;
+  font-size: 12px;
+  line-height: 20px;
+} */
+.contextmenu::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 12px solid wheat;
+  position: absolute;
+  top: 16px;
+  left: -12px;
+}
+
+.contextmenu{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  background-color: wheat;
+  color: black;
+}
+
+li {
+  list-style-type: none;
+  width:100%;
+}
+
+li:not(.edit):hover {
+  cursor: pointer;
+  background: #468be1;
+  opacity: 0.5;
+}
+
+li:not(.edit):active {
+  background: blue;
+  opacity: 0.5;
+}
+
+ul li ul {
+  display: none;
+}
+
+ul li:hover ul {
+  display: block;
+  transition: display 1s;
+}
+
+ul {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 3px 7px 6px -27px;
+  color: black;
+}

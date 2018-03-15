@@ -1,0 +1,8 @@
+<div (click)="disableContextMenu()" (contextmenu)="setContextMenu($event)">
+  <div on-Drop="onDrop($event)"  [style.cursor] = "moveable ? 'move' : 'auto'" on-dragover="allowDrop($event)" #cesiumContainer class="mpC">
+  </div>
+
+  <div *ngIf="contextmenu">
+    <app-contextmenu (setMoveable)="setMoveable($event)" (changeImg)="changeImg($event)" (deleteEntity)="deleteEntity($event)" [x]="contextmenuX" [y]="contextmenuY"></app-contextmenu>
+  </div>
+</div>

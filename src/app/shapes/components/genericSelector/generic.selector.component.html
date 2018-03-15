@@ -1,0 +1,3 @@
+<select ng-model="any" (change)="onSelectionChanged($event)">
+  <option *ngFor="let option of values" value="{{option.name}}" >{{option.name}}</option>
+</select>

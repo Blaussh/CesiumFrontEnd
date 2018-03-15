@@ -1,0 +1,13 @@
+<div class="contextmenu" [ngStyle]="{'left.px': x, 'top.px': y}">
+  <ul>
+    <li (click)="delete()">Delete</li>
+    <li class="edit" >Edit
+      <ul>
+        <li (click)="change('tank')">tank</li>
+        <li (click)="change('soldier')">soldier</li>
+        <li (click)="change('aircraft')">aircraft</li>
+      </ul>
+    </li>
+    <li (click)="move()">Move</li>
+  </ul>
+</div>

@@ -1,0 +1,23 @@
+<div *ngIf="!authService.isAuthenticated" class="login">
+  <div class=login-wrapper>
+    <form class="login-form">
+      <div class="login-title">Login</div>
+      <div class="user-name">
+        <!-- <span>User Name:</span> -->
+        <input [(ngModel)]="loginData.username" name="username" placeholder="User Name">
+      </div>
+      <div class="password">
+        <!-- <span>Password:</span> -->
+        <input [(ngModel)]="loginData.password" name="password" placeholder="Password" type="password">
+      </div>
+      <a (click)="login()" class="login-btn">Login</a>
+    </form>
+  </div>
+</div>
+<div *ngIf="!!authService.isAuthenticated" class="welcome">
+  <div class=login-wrapper>
+    <form class="login-form">
+      <div class="login-title">welcome</div>
+    </form>
+  </div>
+</div>

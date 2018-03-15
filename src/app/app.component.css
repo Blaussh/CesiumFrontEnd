@@ -1,0 +1,56 @@
+/* .navigation { grid-area: navigation; }
+.shapes { grid-area: shapes; }
+.cesium { grid-area: cesium; }
+.openView { grid-area: openView; }
+.navBar { grid-area: navBar; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'navBar navBar navBar navBar navBar navBar'
+    'openView openView openView openView openView openView'
+    'navigation navigation navigation navigation navigation navigation'
+    'shapes cesium cesium cesium cesium cesium';
+  grid-template-columns: minmax(100px, max-content);
+}
+
+.grid-container > div {
+  font-size: 30px;
+} */
+.createOrOpen {
+  display: flex;
+  flex-direction: column;
+  width: 75em;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cesiumMap {
+  display: flex;
+  flex-direction: row;
+  height: 60em;
+}
+
+.grid-container{
+  height: 100%;
+  width: 100%;
+}
+.createMission::befor ::after{
+  height: auto;
+}
+
+.selectMission::befor ::after{
+  height: auto;
+}
+
+.save a{
+  color: slateblue;
+  cursor: pointer;
+  background-color: lightgray;
+  border-radius: 5px
+}

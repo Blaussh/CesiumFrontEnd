@@ -1,0 +1,70 @@
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.fly-btn {
+  cursor: pointer;
+  margin: 4px;
+  font-size: 24px;
+  padding: 8px 31px;
+  background: transparent;
+  border: 2px solid #0c3b0d;
+  color: #0c3b0d;
+  font-weight: bolder;
+  border-radius: 25px
+}
+
+.fly-btn:link,
+.fly-btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+}
+
+.fly-btn:hover {
+    transform: translateY(-3px);
+}
+
+.fly-btn:active {
+    transform: translateY(-1px);
+}
+
+.address-input {
+  margin: 7px;
+  padding: 17px 0px;
+  font-size: large;
+  background: transparent;
+  color: #e72e2e;
+  background: black;
+}
+
+.address-input::-webkit-input-placeholder {
+  color: #dedfb2;
+}
+
+#select-address-title {
+  padding: 41px 1px 7px 0px;
+  font-size: 24px;
+  color: #0c3b0d;
+  font-weight: bolder;
+  border-bottom: 2px solid #0c3b0d;
+  margin-bottom: 13px;
+}
+/* .view-name-input {
+  margin: 7px;
+  padding: 17px 0px;
+  font-size: large;
+  background: transparent;
+  color: #e72e2e;
+  background: black;
+}
+
+.view-name-input::-webkit-input-placeholder {
+  color: #dedfb2;
+} */
+
