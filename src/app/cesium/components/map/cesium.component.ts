@@ -265,13 +265,6 @@ export class CesiumComponent implements OnInit, AfterViewInit, OnDestroy {
 
     this.openViewSubscription = this.openViewStore$.map(state => state.viewData).subscribe(data => {
       if (!this.pageLoading) {
-        const imagesRoot = '../../../../assets/images';
-        const images = [
-          { id: -1, name: 'NONE', shapeSource: '' },
-          { id: 0, name: 'tank', shapeSource: `${imagesRoot}/tank.jpg` },
-          { id: 1, name: 'soldier', shapeSource: `${imagesRoot}/soldier.png` },
-          { id: 2, name: 'aircraft', shapeSource: `${imagesRoot}/aircraft.png` }
-        ];
 
         if (data.viewData !== undefined) {
           const t = 0;
@@ -290,13 +283,13 @@ export class CesiumComponent implements OnInit, AfterViewInit, OnDestroy {
               if (item.classification.indexOf('.') !== -1) {
                 item.classification = item.classification.substr(0, item.classification.indexOf('.'));
               }
-              for (let _i = 0; _i < images.length; _i++) {
-                if (images[_i].name === item.classification) {
+              for (let _i = 0; _i < CesiumComponent.images.length; _i++) {
+                if (CesiumComponent.images[_i].name === item.classification) {
                   index = _i;
                   break;
                 }
               }
-              CesiumComponent.billboardImage = images[index].shapeSource;
+              CesiumComponent.billboardImage = CesiumComponent.images[index].shapeSource;
               CesiumComponent.viewer.entities.add({
                 position: Cesium.Cartesian3.fromDegrees(
                   item.position_y,
